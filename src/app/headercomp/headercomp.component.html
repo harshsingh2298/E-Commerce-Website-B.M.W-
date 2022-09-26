@@ -1,0 +1,81 @@
+
+
+
+
+
+  <style>
+    body {
+      background-image: url('./assets/bmw.jpeg');
+      background-size: 100% 130%;
+    }
+    </style>
+<mat-toolbar color="primary">
+  <mat-toolbar-row >
+   <button mat-icon-button color="accent" (click)="sidenav.toggle()" >
+      <mat-icon style="color:white;" aria-label="sidenav.toggle();">menu </mat-icon>
+    </button>
+
+   
+    <!-- <i class='fa-solid fa-pizza-slice'></i> -->
+    <img src="./assets/logo.jpeg" alt="img">
+    <span style="color:white ;" >BMW MOTORS</span> 
+    
+    <input class="form-control form-control-sm mr-3 w-40" type="text" style="margin-left: 740px;"
+    placeholder=" S E A R C H " aria-label="Search" matInput>
+<button mat-icon-button >
+  <mat-icon>search</mat-icon>
+</button>
+
+    <button mat-icon-button style="  margin-left: 20px;" routerLink="login"  routerLinkActive="Active">
+      <mat-icon>open_in_new</mat-icon> logout
+     </button>
+
+     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" style="margin-left: 40px;" >
+      <mat-icon  matTooltip="Manage Profile">person_outline</mat-icon>
+    </button>
+ 
+    <mat-menu #menu="matMenu" >
+      <button mat-menu-item style="color: rgb(4, 115, 162);">
+      <a href ="cart2"><mat-icon style="color: rgb(4, 115, 162);">Cart</mat-icon></a>
+      <span>Cart</span>
+      </button>
+      <button mat-menu-item style="color: rgb(4, 115, 162);">
+       <mat-icon style="color: rgb(4, 115, 162);">help</mat-icon>
+       <span>Help</span>
+     </button>
+     <button mat-menu-item style="color: rgb(4, 115, 162);">
+       <mat-icon style="color: rgb(4, 115, 162);">notifications_off</mat-icon>
+       <span>Disabled alerts</span>
+     </button>
+     <button mat-menu-item style="color: rgb(4, 115, 162);">
+       <mat-icon style="color: rgb(4, 115, 162);">feedback</mat-icon>
+       <span>Send feedback</span>
+     </button>
+    </mat-menu>
+ 
+  </mat-toolbar-row>
+</mat-toolbar>
+
+ <mat-sidenav-container > 
+  <mat-sidenav #sidenav opened="false" [mode]="(isHandset$ | async) ? 'over' : 'side'" 
+  style="  background-color: rgb(0,100,145);">
+    <mat-nav-list style="width:150px; " >
+        <br><br>
+      <button mat-button color="warn" routerLink="login"  routerLinkActive="Active" style="color: white; margin-left: 20px;" >
+      LogIn
+      </button>
+      <br><br>
+      <button mat-button color="warn" routerLink="registation"  routerLinkActive="Active" style="color: white; margin-left: 20px;">
+      SignIn
+      </button>    
+      
+    </mat-nav-list>   
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <br>
+   <div style="height: 70%; background-color :white;">
+    <router-outlet></router-outlet>
+    <!-- <app-dashboard></app-dashboard>  -->
+    </div> 
+  </mat-sidenav-content> 
+</mat-sidenav-container> 

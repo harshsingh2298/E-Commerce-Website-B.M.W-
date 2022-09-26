@@ -1,0 +1,32 @@
+<html>
+<body>
+  <style>
+    body {
+      background-image: url('./assets/bg.jpg');
+     size: 100px;
+    }
+    </style>
+
+
+<div fxLayout="row wrap" fxLayout.xs="column"  style="margin-left: 80px; margin-top: -30px;">
+<div class= "dashboard" *ngFor="let x of vehicle" fxFlex="17%">
+<mat-card class="example-card">
+  <mat-card-header>
+   
+    <mat-card-title style="margin-left:40px ;">{{x.vehicleName}}</mat-card-title>
+    
+  </mat-card-header>
+  <app-image [image]="x?.image"></app-image>
+  <mat-card-content>
+    <h3 style="color:white ;">{{x.vehicleModel}}</h3>
+  <span style="color:white ;">PRICE :₹{{x.vehiclePrice}}</span>
+  </mat-card-content>
+  <mat-card-actions>
+    <span style="color:yellow;"><button mat-button (click)="addCart(x)">ADD CART</button></span>
+    <!-- <span style="color:yellow ;"><button mat-button (click)="delete(x)">DEL</button></span> -->
+    <span style="color:yellow ;"><button mat-button (click)="update(x)">UPDATE</button></span>
+  </mat-card-actions>
+</mat-card>
+</div>
+</div>
+</body></html>

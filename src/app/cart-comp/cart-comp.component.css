@@ -1,0 +1,29 @@
+mat-card{
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+   
+  }
+  mat-card-header{
+    margin-bottom:15px ;
+  }
+  .example-card{
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4); 
+  }
+  mat-card-title{
+    color: #0092CC;
+    font-weight: bold;
+  }
+  h3{
+    color: #EE0405;
+    font-weight:bold;
+  }
+  app-image{
+    width: 100px;
+    height: 100px;
+  }
+  body {
+    height: 100%;
+  }
+  

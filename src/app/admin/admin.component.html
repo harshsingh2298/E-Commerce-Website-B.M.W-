@@ -1,0 +1,23 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center" style="margin-left: 80px; margin-top: -20px;">
+
+
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>ADMIN LOGIN</mat-card-title>
+      </mat-card-header>
+      <form class="example-form" [formGroup]="AdminForm">
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Username" formControlName="Name">
+      
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Password" formControlName="PhoneNo">
+     
+          </mat-form-field>
+        </mat-card-content>
+        <button mat-stroked-button color="white" class="btn-block" (click)="save()">Log in</button>
+      </form>
+    </mat-card>
+    
+  </div>
